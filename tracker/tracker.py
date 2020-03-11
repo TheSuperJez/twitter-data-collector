@@ -36,6 +36,6 @@ def track(api_data, path, keyword):
     myStream = tweepy.Stream(auth = api.auth, listener=myStreamListener)
     global outputfile
     outputfile = path + "/" + keyword
-    myStream.filter(track=keyword)
+    myStream.filter(track=[keyword])
 
 
