@@ -22,6 +22,7 @@ class MyStreamListener(tweepy.StreamListener):
             data['user_location'] = user_location
             data['timestamp'] = epochs
             data['text'] = text
+            data['coordinates'] = coordinates
             f.write(json.dumps(data, indent = 4, ensure_ascii=False))
             f.write(",")
 

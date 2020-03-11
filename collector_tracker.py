@@ -17,7 +17,6 @@ if __name__ == '__main__':
     print("Twitter data collector will store the new tweets for " + keyword)
     input("Press Enter to continue...")
     tracker.track(api_data, common_functions.get_path("track"), keyword)
-    
     print(args)
     
 

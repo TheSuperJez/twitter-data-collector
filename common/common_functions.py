@@ -40,3 +40,9 @@ def get_config():
     config['ACCESS_TOKEN'] = doc["ACCESS_TOKEN"]
     config['ACCESS_TOKEN_SECRET'] = doc["ACCESS_TOKEN_SECRET"]
     return config
+
+def append_to_cursor(neighbours):
+    f=open('data/cursor.txt','a+')
+    l1=map(lambda x:str(x)+'\n', neighbours)
+    f.writelines(l1)
+    f.close()
